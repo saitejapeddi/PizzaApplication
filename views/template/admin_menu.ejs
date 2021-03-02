@@ -1,0 +1,69 @@
+<% include ../partials/header %>
+
+<div class="ftco-section">
+
+	<!-- Search & Pagination -->
+	<div class="container menu-container">
+		<div class="row">
+			<div class="col-3"></div>
+			<div class="col-6 text-center">
+				<form class="form-inline">
+					<div class="form-group">
+						<h4>Name : &nbsp;</h4>
+						<input type="text" name="search" id="searchField" placeholder="Enter dish name"
+							class="form-control">&nbsp;&nbsp;
+						<h4>Category : </h4>&nbsp;&nbsp;&nbsp;
+						<select id="filterField" name="filter" class="form-control" >
+							<option value="" selected >Any</option>
+							<option value="pizza" >Pizza</option>
+							<option value="pasta">Pasta</option>
+							<option value="burger">Burger</option>
+							<option value="drink">Drink</option>
+						</select>
+						<a class="btn btn-primary" id="searchSubmit" style="background-color:transparent">Search</a>
+					</div>
+				</form>
+			</div>
+			<div class="col-3"></div>
+		</div>
+		<div class="row">
+			<div class="col-3"></div>
+			<div class="col-6 text-center">
+				<nav aria-label="Menu navigation">
+					<ul class="pagination menu-pagination">
+						<div class="row">
+							<div class="col-3">
+								<li class="page-item"><a class="ml-2 btn btn-white btn-outline-white menu-paging"
+										id="pizzaLink">Pizzas</a></li>
+							</div>
+							<div class="col-3">
+								<li class="page-item"><a class="ml-2 btn btn-white btn-outline-white menu-paging"
+										id="pastaLink">Pastas</a></li>
+							</div>
+							<div class="col-3">
+								<li class="page-item"><a class="ml-2 btn btn-white btn-outline-white menu-paging"
+										id="burgerLink">Burgers</a></li>
+							</div>
+							<div class="col-3">
+								<li class="page-item"><a class="ml-2 btn btn-white btn-outline-white menu-paging"
+										id="drinkLink">Drinks</a></li>
+							</div>
+						</div>
+					</ul>
+				</nav>
+			</div>
+			<div class="col-3"></div>
+		</div>
+
+	</div>
+
+
+	<div class="container-wrap dynamic-menu-container">
+		<% include ../menuPaging %>
+	</div>
+
+
+
+
+
+	<% include ../partials/footer %>
